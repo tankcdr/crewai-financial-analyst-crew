@@ -1,0 +1,16 @@
+research_company_task:
+  description: >
+    Use a search tool to lookup this company's stock information, earnings reports, and financial performance: {company_name}
+    The goal is to prepare enough information to make an informed analysis of the company's stock performance.
+    You should gather infromation to support the analysis of current stock price, profibility ratios,
+    Liquidity ratios, solvency ratios, efficiency ratios, growth metrics, valuation metrics, and cash flow metrics.
+    It is Q1 2024.
+  expected_output: >
+    All of the relevant financial information about the company's stock performance from the most recent reporting.
+
+analyze_company_task:
+  description: >
+    Take {company_name}'s financial information, analyze it, and provide a financial analysis including profibility ratios,
+    Liquidity ratios, solvency ratios, efficiency ratios, growth metrics, valuation metrics, and cash flow metrics.
+  expected_output: >
+    A nicely formated financial analysis including all of the financial metrics necessary for a thorough analysis of a company's stock performance.
