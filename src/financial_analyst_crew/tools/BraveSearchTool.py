@@ -18,7 +18,7 @@ class BraveSearchTool(BaseTool):
     " For example, 'What is an LLM?'."
   )
   
-  top_k: int = Field(default=10, ge=0, le=20, description="Number of results to return", example=10)  
+  top_k: int = Field(default=10, ge=1, le=20, description="Number of results to return", example=10)  
   safesearch: str = Field(default="strict", description="Safe search level", example="strict", enum=["off", "moderate", "strict"])  
   
   def __init__(self, top_k: int = 10, safesearch: str = "strict", **kwargs):
