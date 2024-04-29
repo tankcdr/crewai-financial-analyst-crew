@@ -4,4 +4,5 @@ Adapted from Matthew Berman's tutorial [here](https://www.youtube.com/watch?v=iJ
 
 ## Issues
 
-1. The returned data is not accurate. The output claims 2024 data, but it is roughly 2022 data.
+1. ~~The returned data is not accurate. The output claims 2024 data, but it is roughly 2022 data.~~
+   a. Updated BraveSearchTool with new framework. This is returning good data now!
