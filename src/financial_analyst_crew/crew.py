@@ -2,8 +2,7 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from langchain_openai import ChatOpenAI
 from langchain.tools.yahoo_finance_news import YahooFinanceNewsTool
-from crewai_tools import WebsiteSearchTool, SerperDevTool
-from financial_analyst_crew.tools.BraveSearchTools import BraveSearchTools
+from financial_analyst_crew.tools import BraveSearchTool
 
 @CrewBase
 class FinancialAnalystCrew():
@@ -19,7 +18,7 @@ class FinancialAnalystCrew():
         return Agent(
             config = self.agents_config["company_researcher"], 
             llm=self.llm,
-            #tools = [YahooFinanceNewsTool(), WebsiteSearchTool(), SerperDevTool()]
+            tools = [BraveSearchTool(), YahooFinanceNewsTool()]
         )
         
     @agent

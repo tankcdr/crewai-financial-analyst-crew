@@ -1,17 +1,19 @@
+
+from langchain_core.tools import BaseTool
+
 import json
 import os
-
 import requests
 from langchain.tools import tool
 
 
-class BraveSearchTools():
+class BraveSNewsTool(BaseTool):
   @tool("Search the internet")
   def search_internet(query):
     """Useful to search the internet 
     about a a given topic and return relevant results"""
     top_result_to_return = 4
-    url = "https://api.search.brave.com/res/v1/web/search"
+    url = "https://api.search.brave.com/res/v1/news/search"
     payload = json.dumps({"q": query})
     headers = {
         'X-Subscription-Token': os.environ['BRAVE_SEARCH_API_KEY'],
